@@ -7,22 +7,22 @@
     - zorg dat de tabel in zijn geheel:
         - [ ] een gele achtergrond heeft //
         - [ ] een purpere tekstkleur heeft //
-        - [ ] de spaties tussen de woorden steeds naast elkaar laat staan bij het resizen van het venster (zoek naar white-space: nowrap)
-        - [ ] de tabel steeds de volledige schermbreedte (100%) benut
-        - [ ] gebruik hiervoor een inline style op de juiste plaats
+        - [ ] de spaties tussen de woorden steeds naast elkaar laat staan bij het resizen van het venster (zoek naar white-space: nowrap) //
+        - [ ] de tabel steeds de volledige schermbreedte (100%) benut //
+        - [ ] gebruik hiervoor een inline style op de juiste plaats //
 
     Gebruik voor de volgende instellingen het style-element.
 
     Zorg er voor dat vanuit een style-element volgende CSS wordt gedefinieerd waarin:
 
     - de header van de tabel:
-        - [ ] een blauwe achtergrond heeft
+        - [ ] een blauwe achtergrond heeft //
     - als over een cel wordt gehoverd, moet de opmaak van de cel veranderen naar:
-        - [ ] een zwarte achtergrond
-        - [ ] een witte tekstkleur
+        - [ ] een zwarte achtergrond //
+        - [ ] een witte tekstkleur //
         - je hebt hiervoor het pseudo-element hover nodig
     - goede films (class goodmovie) moeten deze opmaak hebben:
-        - [ ]een groene achtergrondkleur
+        - [ ] een groene achtergrondkleur //
         - de classes zijn al toegewezen aan de enkele tabel-rijen
     
     - [ ] kies zelf welke films ja als 'goodmovie' aanduidt
@@ -37,6 +37,10 @@
         - Zie hiervoor op w3schools bij Tables of zoek naar het overflow-x-attribuut
         - [ ] Test dit uit door de development-tools van de browser te openen en het scherm te resizen
 
+         <style>
+  th{color:purple}
+  </style> voorbeeld
+
 -->
 
 <!DOCTYPE html>
@@ -46,10 +50,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Movies</title>
+    <style>
+      th {
+        background-color: blue;
+      }
+      td:hover,
+      th:hover {
+        background-color: black;
+        color: white;
+      }
+      .goodmovie {
+        background-color: green;
+      }
+      .paddingtoevoegen {
+        padding-right: 2%;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        padding-left: 2%;
+      }
+    </style>
   </head>
 
   <body>
-    <table style="background-color: yellow; color: purple;">
+    <table
+      style="background-color: yellow; color: purple; white-space: nowrap; width: 100%; "
+    >
       <tr>
         <th>id</th>
         <th>name</th>
@@ -88,14 +113,14 @@
       <tr>
         <td>5</td>
         <td>Toy Story 3</td>
-        <td>Lee Unkrich</td>
+        <td class="paddingtoevoegen">Lee Unkrich</td>
         <td>2010</td>
         <td>103</td>
       </tr>
-      <tr>
+      <tr class="goodmovie">
         <td>6</td>
         <td>Monsters, Inc.</td>
-        <td>Pete Docter</td>
+        <td class="paddingtoevoegen">Pete Docter</td>
         <td>2001</td>
         <td>92</td>
       </tr>
@@ -103,12 +128,12 @@
         <td>7</td>
         <td>Cars 2</td>
         <td>John Lasseter</td>
-        <td>2011</td>
+        <td class="paddingtoevoegen">2011</td>
         <td>120</td>
       </tr>
-      <tr>
+      <tr class="goodmovie">
         <td>8</td>
-        <td>Up</td>
+        <td class="paddingtoevoegen">Up</td>
         <td>Pete Docter</td>
         <td>2009</td>
         <td>101</td>
@@ -116,7 +141,7 @@
       <tr>
         <td>9</td>
         <td>Finding Nemo</td>
-        <td>Andrew Stanton</td>
+        <td class="paddingtoevoegen">Andrew Stanton</td>
         <td>2003</td>
         <td>107</td>
       </tr>
@@ -124,31 +149,31 @@
         <td>10</td>
         <td>The Incredibles</td>
         <td>Brad Bird</td>
-        <td>2004</td>
+        <td class="paddingtoevoegen">2004</td>
         <td>116</td>
       </tr>
       <tr>
         <td>11</td>
         <td>Ratatouille</td>
         <td>Brad Bird</td>
-        <td>2007</td>
+        <td class="paddingtoevoegen">2007</td>
         <td>115</td>
       </tr>
-      <tr>
+      <tr class="goodmovie">
         <td>12</td>
         <td>WALL-E</td>
         <td>Andrew Stanton</td>
         <td>2008</td>
         <td>104</td>
       </tr>
-      <tr>
+      <tr class="goodmovie">
         <td>13</td>
         <td>Monsters University</td>
-        <td>Dan Scanlon</td>
+        <td class="paddingtoevoegen">Dan Scanlon</td>
         <td>2013</td>
         <td>110</td>
       </tr>
-      <tr>
+      <tr class="paddingtoevoegen">
         <td>14</td>
         <td>Toy Story 2</td>
         <td>John Lasseter</td>
