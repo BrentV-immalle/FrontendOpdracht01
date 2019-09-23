@@ -29,13 +29,13 @@
 
     - [ ] Geef de tabel zelf nog extra layout gebruik makend van het box-model, d.w.z.
         - [ ] Gebruik geen inline-style!
-        - [ ] Ken padding toe aan bepaalde elementen
-        - [ ] Ken margins toe aan bepaalde elementen
-        - [ ] Pas de border aan van bepaalde elementen, b.v. de tabel-header
+        - [ ] Ken padding toe aan bepaalde elementen //
+        - [ ] Ken margins toe aan bepaalde elementen //
+        - [ ] Pas de border aan van bepaalde elementen, b.v. de tabel-header //
 
-    - [ ] Zorg dat de tabel responsief is (d.w.z. op kleinere schermen een horizontale scrollbar zal tonen indien nodig)
-        - Zie hiervoor op w3schools bij Tables of zoek naar het overflow-x-attribuut
-        - [ ] Test dit uit door de development-tools van de browser te openen en het scherm te resizen
+    - [ ] Zorg dat de tabel responsief is (d.w.z. op kleinere schermen een horizontale scrollbar zal tonen indien nodig) //
+        - Zie hiervoor op w3schools bij Tables of zoek naar het overflow-x-attribuut //
+        - [ ] Test dit uit door de development-tools van de browser te openen en het scherm te resizen //
 
          <style>
   th{color:purple}
@@ -62,124 +62,148 @@
       .goodmovie {
         background-color: green;
       }
-      .paddingtoevoegen {
-        padding-right: 2%;
-        padding-bottom: 2%;
-        padding-top: 2%;
-        padding-left: 2%;
+      .padding {
+        padding-right: 1.5%;
+        padding-left: 1%;
+        padding-bottom: 1%;
+        padding-top: 1%;
+      }
+
+      table {
+        margin-left: 0.25%;
+        margin-right: 0.25%;
+        margin-top: 0.25%;
+        margin-bottom: 0.25%;
+
+        border-width: 2%;
+        border-color: red;
+      }
+
+      td {
+        border-style: groove;
+      }
+      th {
+        border-style: groove;
+        border-width: 2%;
+        border-color: black;
+      }
+      .tabeldiv {
+        overflow-x: auto;
       }
     </style>
   </head>
 
   <body>
-    <table
-      style="background-color: yellow; color: purple; white-space: nowrap; width: 100%; "
-    >
-      <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>directory</th>
-        <th>year</th>
-        <th>min</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Cars</td>
-        <td>John Lasseter</td>
-        <td>2006</td>
-        <td>117</td>
-      </tr>
-      <tr class="goodmovie">
-        <td>2</td>
-        <td>Brave</td>
-        <td>Brenda Chapman</td>
-        <td>2012</td>
-        <td>102</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>A Bug&#39;s Life</td>
-        <td>John Lasseter</td>
-        <td>1998</td>
-        <td>95</td>
-      </tr>
-      <tr class="goodmovie">
-        <td>4</td>
-        <td>Toy Story</td>
-        <td>John Lasseter</td>
-        <td>1995</td>
-        <td>81</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Toy Story 3</td>
-        <td class="paddingtoevoegen">Lee Unkrich</td>
-        <td>2010</td>
-        <td>103</td>
-      </tr>
-      <tr class="goodmovie">
-        <td>6</td>
-        <td>Monsters, Inc.</td>
-        <td class="paddingtoevoegen">Pete Docter</td>
-        <td>2001</td>
-        <td>92</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>Cars 2</td>
-        <td>John Lasseter</td>
-        <td class="paddingtoevoegen">2011</td>
-        <td>120</td>
-      </tr>
-      <tr class="goodmovie">
-        <td>8</td>
-        <td class="paddingtoevoegen">Up</td>
-        <td>Pete Docter</td>
-        <td>2009</td>
-        <td>101</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>Finding Nemo</td>
-        <td class="paddingtoevoegen">Andrew Stanton</td>
-        <td>2003</td>
-        <td>107</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>The Incredibles</td>
-        <td>Brad Bird</td>
-        <td class="paddingtoevoegen">2004</td>
-        <td>116</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Ratatouille</td>
-        <td>Brad Bird</td>
-        <td class="paddingtoevoegen">2007</td>
-        <td>115</td>
-      </tr>
-      <tr class="goodmovie">
-        <td>12</td>
-        <td>WALL-E</td>
-        <td>Andrew Stanton</td>
-        <td>2008</td>
-        <td>104</td>
-      </tr>
-      <tr class="goodmovie">
-        <td>13</td>
-        <td>Monsters University</td>
-        <td class="paddingtoevoegen">Dan Scanlon</td>
-        <td>2013</td>
-        <td>110</td>
-      </tr>
-      <tr class="paddingtoevoegen">
-        <td>14</td>
-        <td>Toy Story 2</td>
-        <td>John Lasseter</td>
-        <td>1999</td>
-        <td>93</td>
-      </tr>
-    </table>
+    <div class="tabeldiv">
+      <table
+        style="background-color: yellow; color: purple; white-space: nowrap; width: 100%; "
+      >
+        <tr>
+          <th>id</th>
+          <th class="padding">name</th>
+          <th>directory</th>
+          <th>year</th>
+          <th>min</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="padding">Cars</td>
+          <td>John Lasseter</td>
+          <td>2006</td>
+          <td>117</td>
+        </tr>
+        <tr class="goodmovie">
+          <td>2</td>
+          <td class="padding">Brave</td>
+          <td>Brenda Chapman</td>
+          <td>2012</td>
+          <td>102</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="padding">A Bug&#39;s Life</td>
+          <td>John Lasseter</td>
+          <td>1998</td>
+          <td>95</td>
+        </tr>
+        <tr class="goodmovie">
+          <td>4</td>
+          <td class="padding">Toy Story</td>
+          <td>John Lasseter</td>
+          <td>1995</td>
+          <td>81</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="padding">Toy Story 3</td>
+          <td>Lee Unkrich</td>
+          <td>2010</td>
+          <td>103</td>
+        </tr>
+        <tr class="goodmovie">
+          <td>6</td>
+          <td class="padding">Monsters, Inc.</td>
+          <td>Pete Docter</td>
+          <td>2001</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td class="padding">Cars 2</td>
+          <td>John Lasseter</td>
+          <td>2011</td>
+          <td>120</td>
+        </tr>
+        <tr class="goodmovie">
+          <td>8</td>
+          <td class="padding">Up</td>
+          <td>Pete Docter</td>
+          <td>2009</td>
+          <td>101</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td class="padding">Finding Nemo</td>
+          <td>Andrew Stanton</td>
+          <td>2003</td>
+          <td>107</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="padding">The Incredibles</td>
+          <td>Brad Bird</td>
+          <td>2004</td>
+          <td>116</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="padding">Ratatouille</td>
+          <td>Brad Bird</td>
+          <td>2007</td>
+          <td>115</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td class="padding">WALL-E</td>
+          <td>Andrew Stanton</td>
+          <td>2008</td>
+          <td>104</td>
+        </tr>
+        <tr class="goodmovie">
+          <td>13</td>
+          <td class="padding">Monsters University</td>
+          <td>Dan Scanlon</td>
+          <td>2013</td>
+          <td>110</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td class="padding">Toy Story 2</td>
+          <td>John Lasseter</td>
+          <td>1999</td>
+          <td>93</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
